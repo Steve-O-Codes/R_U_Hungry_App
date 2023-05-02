@@ -48,6 +48,10 @@ h1:hover {
   text-shadow: -4px 3px red;
 }
 
+.span {
+  color: #f7d002;
+}
+
 .info {
   border-bottom: 2px solid #f7d002;
   font-size: 1.2rem;
@@ -63,6 +67,7 @@ h1:hover {
   background-color: #454e9e;
   border: 2px solid #fff;
   border-radius: 20px;
+  padding: 1em 0.2em;
 }
 
 .menu-container {
@@ -73,6 +78,14 @@ h1:hover {
 
 .add-item-container {
   display: none;
+}
+
+.add-course {
+  margin-top: 0;
+}
+
+.input {
+  display: block;
 }
 
 .menu-container {

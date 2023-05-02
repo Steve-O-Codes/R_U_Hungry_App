@@ -130,7 +130,7 @@ const genMenu = () => {
   addItemEl.style.display = "none";
   menuContainerEl.style.display = "flex";
   infoEl.innerHTML =
-    "Here is a 3 course menu just for you! Not happy with the suggestions? <br> Click 'Generate New Menu' to get more suggestions";
+    "Here is a 3 course menu just for you! Click <span>'View Menu'</span> to see your recipes and get cooking! <br> Not happy with the suggestions? Click <span>'Generate New Menu'</span> to get more suggestions";
   genBtn.textContent = "Generate New Menu";
   viewBtn.style.display = "block";
   // display menu
@@ -160,4 +160,4 @@ const addItem = () => {
 
 genBtn.addEventListener("click", genMenu);
 viewBtn.addEventListener("click", viewMenu);
-addItemEl.addEventListener("click", addItem);
+addBtn.addEventListener("click", addItem);
