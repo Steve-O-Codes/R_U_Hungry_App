@@ -104,9 +104,11 @@ const viewBtn = document.querySelector(".view-menu-btn");
 const starterEl = document.querySelector(".starter");
 const mainEl = document.querySelector(".main");
 const dessertEl = document.querySelector(".dessert");
+const addItemEl = document.querySelector(".add-item-container");
 
 // default
 menuContainerEl.style.display = "none";
+addItemEl.style.display = "none";
 
 // declare menu links list
 let menuLinks;
@@ -125,6 +127,7 @@ const genMenu = () => {
 
   //  Change state
   defaultContainerEl.style.display = "none";
+  addItemEl.style.display = "none";
   menuContainerEl.style.display = "flex";
   infoEl.innerHTML =
     "Here is a 3 course menu just for you! Not happy with the suggestions? <br> Click 'Generate New Menu' to get more suggestions";
@@ -149,5 +152,12 @@ const viewMenu = () => {
   }
 };
 
+const addItem = () => {
+  defaultContainerEl.style.display = "none";
+  menuContainerEl.style.display = "none";
+  addItemEl.style.display = "block";
+};
+
 genBtn.addEventListener("click", genMenu);
 viewBtn.addEventListener("click", viewMenu);
+addItemEl.addEventListener("click", addItem);

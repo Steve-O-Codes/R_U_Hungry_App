@@ -44,6 +44,10 @@ h1 {
   margin: 0;
 }
 
+h1:hover {
+  text-shadow: -4px 3px red;
+}
+
 .info {
   border-bottom: 2px solid #f7d002;
   font-size: 1.2rem;
@@ -141,6 +145,10 @@ h1 {
   color: #fff;
   text-shadow: -1px 0.5px #051937;
   border: 2px solid #fff;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media (max-width: 700px) {
