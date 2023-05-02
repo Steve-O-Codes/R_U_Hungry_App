@@ -1,23 +1,95 @@
-@font-face {
-  font-family: "FuturaRenerRegular";
-  src: url("futura_regular-webfont.eot");
-  src: local("☺"),
-    url("futura_regular-webfont.eot?#iefix") format("embedded-opentype"),
-    url("futura_regular-webfont.woff") format("woff"),
-    url("futura_regular-webfont.ttf") format("truetype"),
-    url("futura_regular-webfont.svg#FuturaRenerRegular") format("svg");
-  font-weight: normal;
-  font-style: normal;
+html {
+  background: url(../images/burger.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.75;
 }
 
-@font-face {
-  font-family: "FuturaRenerLight";
-  src: url("futura_light-webfont.eot");
-  src: local("☺"),
-    url("futura_light-webfont.eot?#iefix") format("embedded-opentype"),
-    url("futura_light-webfont.woff") format("woff"),
-    url("futura_light-webfont.ttf") format("truetype"),
-    url("futura_light-webfont.svg#FuturaRenerLight") format("svg");
-  font-weight: normal;
-  font-style: normal;
+body {
+  margin: 0;
+  box-sizing: border-box;
+  color: #051937;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+.app-section {
+  background-color: rgba(33, 37, 41, 0.9);
+  width: 70%;
+  height: 80vh;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5em;
+  border: 2px solid #fff;
+  border-radius: 20px;
+}
+
+h1 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 0.12em;
+  color: #f7d002;
+  text-shadow: -4px 3px #454e9e;
+}
+
+.info {
+  border-bottom: 2px solid #f7d002;
+}
+
+.menu-item {
+  list-style: none;
+}
+
+.container {
+  width: 80%;
+  height: 60%;
+  margin: 0 auto;
+  background-color: #454e9e;
+}
+
+.menu-container,
+.add-item-container {
+  display: none;
+}
+
+.menu-container {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.default-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.default-text {
+  background-color: #454e9e;
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.25em;
+  border-radius: 20px;
+  font-family: "Bangers", cursive;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin: 0.5em 1.5em;
+}
+
+.generate-menu-btn {
+  background-color: #f7d002;
+  border: 3px solid black;
+  color: #051937;
+}
+
+.add-item-btn {
+  background-color: #454e9e;
+  color: #fff;
+  border: 3px solid #fff;
 }

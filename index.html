@@ -22,13 +22,38 @@
       href="./favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="./favicon/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>R U Hungry</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <h1 class="site-heading">R U Hungry</h1>
-      </nav>
-    </header>
+    <main>
+      <section class="app-section">
+        <h1>R U Hungry</h1>
+        <p class="info">Feeling Hungry?</p>
+        <div class="menu-container container">
+          <ul class="menu-list">
+            <li class="menu-item starter"></li>
+            <li class="menu-item main"></li>
+            <li class="menu-item dessert"></li>
+          </ul>
+        </div>
+        <div class="add-item-container container"></div>
+        <div class="default-container container">
+          <p class="default-text">
+            Show off your chef skills, impress your friends and stop your tummy
+            from grumbling! <br />Generate a menu below 🍔🍟🍕
+          </p>
+        </div>
+        <button class="generate-menu-btn btn">Generate Menu</button>
+        <button class="add-item-btn btn">Add Menu Item</button>
+      </section>
+    </main>
+    <script src="./js/app.js"></script>
   </body>
 </html>
