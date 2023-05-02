@@ -100,9 +100,16 @@ const menuContainerEl = document.querySelector(".menu-container");
 const infoEl = document.querySelector(".info");
 const genBtn = document.querySelector(".generate-menu-btn");
 const addBtn = document.querySelector(".add-item-btn");
+const viewBtn = document.querySelector(".view-menu-btn");
 const starterEl = document.querySelector(".starter");
 const mainEl = document.querySelector(".main");
 const dessertEl = document.querySelector(".dessert");
+
+// default
+menuContainerEl.style.display = "none";
+
+// declare menu links list
+let menuLinks;
 
 const genMenu = () => {
   const starterRand = Math.floor(
@@ -118,14 +125,29 @@ const genMenu = () => {
 
   //  Change state
   defaultContainerEl.style.display = "none";
-  menuContainerEl.style.display = "block";
-  infoEl.textContent =
-    "Here is a 3 course menu just for you! Not happy with the suggestions? Click 'Generate New Menu' to get more suggestions";
+  menuContainerEl.style.display = "flex";
+  infoEl.innerHTML =
+    "Here is a 3 course menu just for you! Not happy with the suggestions? <br> Click 'Generate New Menu' to get more suggestions";
   genBtn.textContent = "Generate New Menu";
+  viewBtn.style.display = "block";
   // display menu
   starterEl.textContent = `${starterEmojis[starterEmojiRand]} Starter: ${localMenu.starters.item[starterRand]}`;
   mainEl.textContent = `${mainsEmojis[mainEmojiRand]} Main: ${localMenu.mains.item[mainRand]}`;
   dessertEl.textContent = `${dessertEmojis[dessertEmojiRand]} Dessert: ${localMenu.desserts.item[dessertRand]}`;
+
+  // menu links
+  menuLinks = [
+    localMenu.starters.link[starterRand],
+    localMenu.mains.link[mainRand],
+    localMenu.desserts.link[dessertRand],
+  ];
+};
+
+const viewMenu = () => {
+  for (const link of menuLinks) {
+    window.open(link);
+  }
 };
 
 genBtn.addEventListener("click", genMenu);
+viewBtn.addEventListener("click", viewMenu);

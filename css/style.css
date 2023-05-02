@@ -19,12 +19,20 @@ body {
 .app-section {
   background-color: rgba(33, 37, 41, 0.9);
   width: 70%;
-  height: 80vh;
+  height: 70%;
   margin: 0 auto;
   text-align: center;
-  margin-top: 5em;
+  margin-top: 1em;
   border: 2px solid #fff;
   border-radius: 20px;
+  padding: 0.5em;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 1.5em 0.5em;
 }
 
 h1 {
@@ -32,10 +40,13 @@ h1 {
   letter-spacing: 0.12em;
   color: #f7d002;
   text-shadow: -4px 3px #454e9e;
+  font-size: 3rem;
+  margin: 0;
 }
 
 .info {
   border-bottom: 2px solid #f7d002;
+  font-size: 1.2rem;
 }
 
 .menu-item {
@@ -43,13 +54,19 @@ h1 {
 }
 
 .container {
-  width: 80%;
-  height: 60%;
+  width: 95%;
   margin: 0 auto;
   background-color: #454e9e;
+  border: 2px solid #fff;
+  border-radius: 20px;
 }
 
-.menu-container,
+.menu-container {
+  display: none;
+  text-align: left;
+  font-size: 2rem;
+}
+
 .add-item-container {
   display: none;
 }
@@ -61,6 +78,10 @@ h1 {
   align-items: center;
 }
 
+.menu-list {
+  padding: 0;
+}
+
 .default-container {
   display: flex;
   justify-content: center;
@@ -70,6 +91,11 @@ h1 {
 .default-text {
   background-color: #454e9e;
   color: #fff;
+}
+
+.btn-holder {
+  display: flex;
+  justify-content: center;
 }
 
 .btn {
@@ -92,4 +118,38 @@ h1 {
   background-color: #454e9e;
   color: #fff;
   border: 3px solid #fff;
+}
+
+.view-menu-btn {
+  display: none;
+  background-color: #051937;
+  border: 3px solid #454e9e;
+  color: #f7d002;
+}
+
+.add-item-btn:hover,
+.view-menu-btn:hover,
+.generate-menu-btn:hover {
+  background-image: linear-gradient(
+    to bottom,
+    #212229,
+    #242d60,
+    #303497,
+    #5430cb,
+    #8c00f9
+  );
+  color: #fff;
+  text-shadow: -1px 0.5px #051937;
+  border: 2px solid #fff;
+}
+
+@media (max-width: 700px) {
+  .btn-holder {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-container {
+    font-size: 1.2rem;
+  }
 }
