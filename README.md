@@ -1,4 +1,4 @@
-R U Hungry App 🍔
+# R U Hungry App 🍔
 <hr>
 
 This is a continuation from my R U Hungry Console App.
@@ -17,3 +17,7 @@ It also has some logic to ensure that the user is entering a correct course such
 **NB** -  pop ups may need to be disabled so that all three recipe pages will open when requested. 
 If view menu is clicked and only one recipe opens, navigate back to the site and click allow pop ups and then click 'View Menu' again and it should work. 
 
+### Technologies used:
+<hr>
+<img height=50 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /><img height=50 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+<img height=50 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/js/js-original.svg" />
