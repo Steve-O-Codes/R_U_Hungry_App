@@ -105,6 +105,10 @@ const starterEl = document.querySelector(".starter");
 const mainEl = document.querySelector(".main");
 const dessertEl = document.querySelector(".dessert");
 const addItemEl = document.querySelector(".add-item-container");
+const courseEl = document.querySelector(".course");
+const dishNameEl = document.querySelector(".dish-name");
+const dishLinkEl = document.querySelector(".dish-link");
+const submitBtn = document.querySelector(".submit-btn");
 
 // default
 menuContainerEl.style.display = "none";
@@ -158,6 +162,43 @@ const addItem = () => {
   addItemEl.style.display = "block";
 };
 
+const submitItem = () => {
+  const courseName = courseEl.value;
+  const dishName = dishNameEl.value;
+  const dishUrl = dishLinkEl.value;
+
+  if (
+    courseName.toLowerCase() === "main" ||
+    courseName.toLowerCase() === "mains"
+  ) {
+    localMenu.mains.item.push(dishName);
+    localMenu.mains.link.push(dishUrl);
+    localStorage.setItem("rUHungryMenu", JSON.stringify(localMenu));
+  } else if (
+    courseName.toLowerCase() === "starter" ||
+    courseName.toLowerCase() === "starters"
+  ) {
+    localMenu.starters.item.push(dishName);
+    localMenu.starters.link.push(dishUrl);
+    localStorage.setItem("rUHungryMenu", JSON.stringify(localMenu));
+  } else if (
+    courseName.toLowerCase() === "dessert" ||
+    courseName.toLowerCase() === "desserts"
+  ) {
+    localMenu.desserts.item.push(dishName);
+    localMenu.desserts.link.push(dishUrl);
+    localStorage.setItem("rUHungryMenu", JSON.stringify(localMenu));
+  } else {
+    addItemEl.innerHTML =
+      "<p>You did not enter a valid course name<br>Enter starter, main or dessert. <br>To retry click 'Add Menu Item'</p>";
+  }
+
+  courseEl.value = "";
+  dishNameEl.value = "";
+  dishLinkEl.value = "";
+};
+
 genBtn.addEventListener("click", genMenu);
 viewBtn.addEventListener("click", viewMenu);
 addBtn.addEventListener("click", addItem);
+submitBtn.addEventListener("click", submitItem);
