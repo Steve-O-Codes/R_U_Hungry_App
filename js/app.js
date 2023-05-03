@@ -168,22 +168,22 @@ const submitItem = () => {
   const dishUrl = dishLinkEl.value;
 
   if (
-    courseName.toLowerCase() === "main" ||
-    courseName.toLowerCase() === "mains"
+    courseName.toLowerCase().trim() === "main" ||
+    courseName.toLowerCase().trim() === "mains"
   ) {
     localMenu.mains.item.push(dishName);
     localMenu.mains.link.push(dishUrl);
     localStorage.setItem("rUHungryMenu", JSON.stringify(localMenu));
   } else if (
-    courseName.toLowerCase() === "starter" ||
-    courseName.toLowerCase() === "starters"
+    courseName.toLowerCase().trim() === "starter" ||
+    courseName.toLowerCase().trim() === "starters"
   ) {
     localMenu.starters.item.push(dishName);
     localMenu.starters.link.push(dishUrl);
     localStorage.setItem("rUHungryMenu", JSON.stringify(localMenu));
   } else if (
-    courseName.toLowerCase() === "dessert" ||
-    courseName.toLowerCase() === "desserts"
+    courseName.toLowerCase().trim() === "dessert" ||
+    courseName.toLowerCase().trim() === "desserts"
   ) {
     localMenu.desserts.item.push(dishName);
     localMenu.desserts.link.push(dishUrl);
