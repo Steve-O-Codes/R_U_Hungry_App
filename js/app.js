@@ -160,6 +160,8 @@ const addItem = () => {
   defaultContainerEl.style.display = "none";
   menuContainerEl.style.display = "none";
   addItemEl.style.display = "block";
+  infoEl.textContent = "Add a menu item below";
+  infoEl.style.color = "#fff";
 };
 
 const submitItem = () => {
@@ -189,8 +191,9 @@ const submitItem = () => {
     localMenu.desserts.link.push(dishUrl);
     localStorage.setItem("rUHungryMenu", JSON.stringify(localMenu));
   } else {
-    addItemEl.innerHTML =
+    infoEl.innerHTML =
       "<p>You did not enter a valid course name<br>Enter starter, main or dessert. <br>To retry click 'Add Menu Item'</p>";
+    infoEl.style.color = "red";
   }
 
   courseEl.value = "";
