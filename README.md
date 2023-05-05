@@ -2,7 +2,7 @@
 <hr>
 
 This is a continuation from my R U Hungry Console App.
-The project can be viewed live here ----> https://stately-unicorn-e05667.netlify.app/
+The project can be viewed live here ----> https://r-u-hungry.netlify.app/
 
 The app is called R U Hungry and is able to generate a 3 course menu for the user - displaying a starter, main and dessert.
 The user can generate new random menus until they are happy with the suggestions. They can then click on view menu and a new tab will open for recipes of each suggested menu item so the user can get cooking!  🍗🍔😋
